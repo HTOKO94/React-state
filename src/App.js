@@ -35,7 +35,13 @@ componentWillUnmount() {
 
     clearInterval(this.state.interval);
   }
+  
+  visibility=()=>{
+  this.setState({
+    show: !this.state.show
+  })
 
+}
   render(){
     console.log("render()");
   return (
