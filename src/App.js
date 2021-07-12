@@ -30,12 +30,12 @@ componentDidUpdate(){
   console.log("componentDidUpdate()")
 }
 
-visibility=()=>{
-  this.setState({
-    show: !this.state.show
-  })
+componentWillUnmount() {
+    console.log("componentWillUnmount()");
 
-}
+    clearInterval(this.state.interval);
+  }
+
   render(){
     console.log("render()");
   return (
