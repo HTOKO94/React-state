@@ -9,7 +9,6 @@ class App extends React.Component {
    bio:"Full Stack JS Developer",
    imgSrc:"Hamza.jpg",
    profession:"Web Developer",
-   show:true,
    count:0,
    interval:null
  };
@@ -37,7 +36,7 @@ componentWillUnmount() {
   render(){
   return (
     <>
-    <h3>{this.state.count}</h3>
+    
     <div className="profile">
        {this.state.show ?
           (<><img src={this.state.imgSrc} alt="Myphoto"></img>
@@ -52,6 +51,7 @@ componentWillUnmount() {
                   <img  src="linkedin.png" alt="linkedin"></img>
                   </a>
                   <a href="https://www.facebook.com/hamza.touko/" target="blanc"><img  src="facebook.png" alt="facebook"></img></a>
+                    <h3>{this.state.count}</h3>
                   </div>
                   </>) : (<h2>Click button to show profile</h2>)
   } 
