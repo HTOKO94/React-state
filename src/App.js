@@ -56,7 +56,7 @@ componentWillUnmount() {
                   </>) : (<h2>Click button to show profile</h2>)
   } 
         </div>
-        <button onClick={this.visibility}>{this.state.show ? "Hide profile" : "Show profile" }</button> 
+        <button onClick={this.visibility}>{this.state.show ? "Hide profile" : "Show profile" : null}</button> 
         </>
   );
   }
