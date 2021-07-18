@@ -3,7 +3,6 @@ import React from 'react';
 
 class App extends React.Component {
   constructor(){
-    console.log("constructor()");
     super();
    this.state = {
    fullName: "Hamza Toukebri",
@@ -11,13 +10,12 @@ class App extends React.Component {
    imgSrc:"Hamza.jpg",
    profession:"Web Developer",
    show:true,
-   interval:null,
-   count:0
+   count:0,
+   interval:null
  };
 }
 
 componentDidMount(){ 
- console.log("componentDidMount()")
   this.setState({
     interval: setInterval(()=>{
     this.setState({count: this.state.count+1});
@@ -26,13 +24,7 @@ componentDidMount(){
   });
 }
 
-componentDidUpdate(){
-  console.log("componentDidUpdate()")
-}
-
 componentWillUnmount() {
-    console.log("componentWillUnmount()");
-
     clearInterval(this.state.interval);
   }
   
@@ -43,9 +35,9 @@ componentWillUnmount() {
 
 }
   render(){
-    console.log("render()");
   return (
     <>
+    <h3>{this.state.count}</h3>
     <div className="profile">
        {this.state.show ?
           (<><img src={this.state.imgSrc} alt="Myphoto"></img>
@@ -61,7 +53,6 @@ componentWillUnmount() {
                   </a>
                   <a href="https://www.facebook.com/hamza.touko/" target="blanc"><img  src="facebook.png" alt="facebook"></img></a>
                   </div>
-                  <h3>{this.state.count}</h3>
                   </>) : (<h2>Click button to show profile</h2>)
   } 
         </div>
