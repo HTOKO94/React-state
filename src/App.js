@@ -14,14 +14,14 @@ class App extends React.Component {
  };
 }
 
-componentDidMount(){ 
-  this.setState({
-    interval: setInterval(()=>{
-    this.setState({ count: this.state.count +1 });
-
-    },1000),
-  });
-}
+  componentDidMount() {
+        this.setState({
+            interval: setInterval(
+                () => this.setState({ count: this.state.count + 1 }),
+                1000
+            ),
+        });
+    }
 
 componentWillUnmount() {
     clearInterval(this.state.interval);
